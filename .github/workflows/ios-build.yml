@@ -16,7 +16,10 @@ jobs:
 
       - name: Show Xcode version
         run: xcodebuild -version
-
+      - name: Create temporary game data placeholder
+        run: |
+          mkdir -p dependencies/ios
+          touch dependencies/ios/Data.rsdk
       - name: Build iOS app
         run: |
           xcodebuild \
